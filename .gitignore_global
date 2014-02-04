@@ -1,0 +1,98 @@
+# look at https://github.com/github/gitignore for infos
+
+#####
+# IntelliJ : # removing .idea because IntelliJ only needs pom.xml #
+########
+*.iml
+*.ipr
+*.iws
+.idea/
+.idea_modules
+out/
+
+# Maven
+target/
+
+####
+# Eclipse
+#####
+
+# Keeping Eclipse project metadata if commented
+# .... For noobs only...
+
+# .project
+# .classpath
+# .settings/
+
+
+*.pydevproject
+
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+####
+# formation binaries
+####
+
+*.pdf
+wkhtml*
+*.ppt
+*.pptx
+*.doc
+*.docx
+*.odt
+wkhtmltopdf
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
