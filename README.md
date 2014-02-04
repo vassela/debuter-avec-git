@@ -153,7 +153,7 @@ Création de la feature
 La voie royale est de créer une branche par feature, aussi petite soit-elle.
 En créant cette feature, je modifie mes fichiers, *master* et *mvc* sont donc dans des états différents. Le processus normal est alors le suivant :
 
-* je fais ma feature dans *mcv*
+* je fais ma feature dans *mvc*
 * `git add .`
 * git commit -m "super mvc"
 * Oups, quelques debug
@@ -188,7 +188,7 @@ Pull
 Un autre scenario est de travailler à deux sur la branche *mvc*
 
 
-* je fais ma feature dans *mcv*
+* je fais ma feature dans *mvc*
 * `git add .`
 * git commit -m "super mvc without bug"
 * git push origin mvc
