@@ -14,7 +14,7 @@ Lexique
 * *Commit* : un commit est un ensemble de modifications apportées et validées
 * *Historique* : Permet de retrouver toutes les modifications apportes au projet. Il est construit à partir de la liste des commits
 * *Repository* : C'est le lieu contenant les fichier du projet, avec son historique
-* *Rollback* : quand on veut revenir en arrière
+* *Rollback* : revenir a une version precedente d'un fichier ou d'un projet
 * *Branche* : Une branche permet d'apporter des évolutions en parrallèle. Jo travaille sur la branche A, Jack travaille sur la branche B. Jack ne voit pas le travail de Jo, et vice-versa.
 * *Merger* : Mélanger deux évolutions faites en parrallèle. Jo a travaillé, Jack a travaillé. Jack récupère le travail de Jo pour le merger dans son travail. Si ils ont travaillés sur les mêmes fichiers, il y a alors un risque de conflit.
 * *Push* : (pousser) Envoyer ses commits vers un Repository
