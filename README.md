@@ -276,7 +276,7 @@ Checkout peut en effet s'effectuer sur une branche ou un fichier. Appliqué à u
 
 Le double-dash indique que l'on s'occupe bien des fichiers, et non des branches. 
 
-## Fuck off, that's shit
+## Argh, that's shit
 
 Mon commit est pourri, jetons-le
 
@@ -289,14 +289,7 @@ Mon commit est pourri, jetons-le
 
 Dans ce cas CoolStuff.java n'existe plus. Tout se retrouve strictement dans l'état du commit précédent. **A utiliser avec les plus grandes précautions !**
 
-
-
-Reculer d'un commit et annuler le précédent
----
-
-* `git revert HEAD` : créera un nouveau commit qui annulera les changements de HEAD
-* `git reset --hard HEAD~1` : detruira le dernier commit au prochain gc
-
+On peut également utiliser cette technique pour se remettre d'un merge qui s'est très mal passé.
 
 
 Reculer d'un commit et annuler le précédent
