@@ -107,12 +107,15 @@ Cela clone le repo sur son disque dur. Le répertoire `.git` est également pré
 C'est la commande la plus fréquente. Elle permet de savoir où l'on en est, et donne des tips pour rollback.
 Si on fait `git status` au début du projet, on devrait être sur la branche *master*, c'est à dire la branche principale.
 
-Pull depuis une Remote,  Push vers une Remote
+
+Récupérer des Commits, Envoyer ses Commits
 ----
 
-Une Remote est un repository distant. Quand on fait git clone https://anyRemote, on rajoute anyRemote à la liste de ses remotes.
+Une Remote est un repository distant. On **pull** les modifications des collègues depuis une Remote. On **push** ses commits vers une Remote pour partager son travail.
 
-		`git remote -v` : liste les remotes enregistrées
+Quand on fait `git clone https://anyRemote`, on rajoute anyRemote à la liste de ses remotes.
+
+		git remote -v : liste les remotes enregistrées
 
 		git add remote origin https://github.com/robusta-code/forum.git 
 
