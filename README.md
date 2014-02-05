@@ -69,13 +69,13 @@ Principes de Git
 
 Trois grands principes :
 
-1. Chaque repo est égal l'un envers l'autre
-2. Git stock des documents complet et non des differences entre deux versions
+* Chaque repo est égal l'un envers l'autre
+* Git stock des documents complet et non des differences entre deux versions
 
 
 Si bien qu'il est possible de merger monRepo/brancheMaster/service/MonService.java avec linusRepo/brancheFeature/workInProgress/MonService.java même si les deux projets n'ont rien à voir
 
-3. Le répertoire caché .git contient tout l'historique du projet
+* Le répertoire caché .git contient tout l'historique du projet
 
 Les avantages de Git
 ---
@@ -284,7 +284,7 @@ Mon commit est pourri, jetons-le
 		# editing  CoolStuff.java
 		git add CoolStuff.java
 		git commit -m "cool stuff"
-		#ooohh that's sucks
+		#ooohh that sucks
 		git reset --hard HEAD
 
 Dans ce cas CoolStuff.java n'existe plus. Tout se retrouve strictement dans l'état du commit précédent. **A utiliser avec les plus grandes précautions !**
