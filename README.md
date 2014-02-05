@@ -1,18 +1,32 @@
 Démarrer avec Git
 ====
 
-Ce guide a été écrit assez rapidement. Il y a des approximations, sans doute encore quelques erreurs, et, volontairement, l'esprit passe avant la lettre. Le [guide officiel](http://git-scm.com/documentation) fait foi.
+Ce guide a été écrit assez rapidement. Il est adapté aux débutants sur Git, mais avec si possible une expérience en CVS/SVN. Le document a été écrit en un trait, il y a encore beaucoup de choses à améliorer. Volontairement, l'esprit passe avant la lettre. Le [guide officiel](http://git-scm.com/documentation) fait foi.
 
-*Push* veut dire pousser, *Pull* veut dire tirer.
 
 Enjoy !
 
 Nicolas Zozol, [Robusta Code](http://www.robusta.io)
 
+Lexique
+---
+
+*Commit* : un commit est un ensemble de modifications apportées et validées
+*Historique* : Permet de retrouver toutes les modifications apportes au projet. Il est construit à partir de la liste des commits
+*Repository* : C'est le lieu contenant les fichier du projet, avec son historique
+*Rollback* : quand on veut revenir en arrière
+*Branche* : Une branche permet d'apporter des évolutions en parrallèle. Jo travaille sur la branche A, Jack travaille sur la branche B. Jack ne voit pas le travail de Jo, et vice-versa.
+*Merger* : Mélanger deux évolutions faites en parrallèle. Jo a travaillé, Jack a travaillé. Jack récupère le travail de Jo pour le merger dans son travail. Si ils ont travaillés sur les mêmes fichiers, il y a alors un risque de conflit.
+*Push* : (pousser) Envoyer ses commits vers un Repository
+*Pull* : (tirer) Récupérer les commits des autres membres de l'équipe depuis le Repository
+SSH : Protocole sécurisé permettant de transmettre des commandes ou des fichiers
+
+
+
 Démarrer avec Git
 ====
 
-Je considère que vous êtes un noob sous Windows.
+Je considère que vous êtes sous Windows.
 
 Telechargez [Git For Windows](http://msysgit.github.io/)
 
@@ -29,7 +43,7 @@ Installez Git. Vérifiez qu'il exist un fichier .gitconfig dans Users/moi
 .gitignore_global
 ---
 
-Ce fichier permet d'ignorer certains fichiers.
+Ce fichier permet d'éviter d'envoyer certains fichiers sur le Repository.
 Essentiellement les fichiers du build et les libs. En fait on ne doit push que le code, et les images.
 
 Voici le fichier [.gitignore_global](.gitignore_global) que j'utilise. La bonne pratique voudrait que l'on ignore les fichier de metadata de l'IDE tel que Eclipse.
