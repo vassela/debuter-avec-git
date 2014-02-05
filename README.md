@@ -19,7 +19,7 @@ Lexique
 * *Merger* : Mélanger deux évolutions faites en parrallèle. Jo a travaillé, Jack a travaillé. Jack récupère le travail de Jo pour le merger dans son travail. Si ils ont travaillés sur les mêmes fichiers, il y a alors un risque de conflit.
 * *Push* : (pousser) Envoyer ses commits vers un Repository
 * *Pull* : (tirer) Récupérer les commits des autres membres de l'équipe depuis le Repository
-SSH : Protocole sécurisé permettant de transmettre des commandes ou des fichiers
+* SSH : Protocole sécurisé permettant de transmettre des commandes ou des fichiers
 
 
 
