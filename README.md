@@ -14,11 +14,12 @@ Lexique
 
 * *Commit* : un commit est un ensemble de modifications apportées et validées. Avec Git on commit d'abord sur son ordinateur, et non sur un serveur.
 * *Historique* : Permet de retrouver toutes les modifications apportes au projet. Il est construit à partir de la liste des commits
-* *Repository* : C'est le lieu contenant les fichier du projet, avec son historique. Chaque developpeur du projet a son Repository *local*. Il y a aussi un Repository nommé *origin* faisant office de serveur.
+* *Repository* : C'est le lieu contenant les fichier du projet, avec **tout** son historique. Chaque developpeur du projet a son Repository *local*. Il y a aussi un Repository nommé *origin* faisant office de serveur.
+* *Remote* : c'est un Repository distant, par opposition à son Repository local
 * *Rollback* : revenir a une version precedente d'un fichier ou d'un projet
 * *Branche* : Une branche permet d'apporter des évolutions en parrallèle. Jo travaille sur la branche A, Jack travaille sur la branche B. Jack ne voit pas le travail de Jo, et vice-versa.
 * *Merger* : Mélanger deux évolutions faites en parrallèle. Jo a travaillé, Jack a travaillé. Jack récupère le travail de Jo pour le merger dans son travail. Si ils ont travaillés sur les mêmes fichiers, il y a alors un risque de conflit.
-* *Push* : (pousser) Envoyer ses commits vers un Repository
+* *Push* : (pousser) Envoyer ses commits vers un Repository Remote
 * *Pull* : (tirer) Récupérer les commits des autres membres de l'équipe depuis le Repository
 * *SSH* : Protocole sécurisé permettant de transmettre des commandes ou des fichiers
 
