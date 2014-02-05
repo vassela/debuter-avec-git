@@ -61,7 +61,7 @@ Pour demarrer avec git, il vaux mieux s'attaquer avec les lignes de commandes. C
 * `cd /c/wode/workspace` vous mène dans votre workspace
 
 Il est possible de communiquer avec un repo Git distant en SSH ou avec HTTP. Il est plus simple d'utiliser HTTP. On distingue les adresses Http avec https://user/monrepo.git  d'une commande ssh du style user@monrepo.git
-Théoriquement, parait-il, ssh bien utilisé est, dit-on, plus sûr.
+Parait-il, ssh bien utilisé est plus sûr.
 
 
 
