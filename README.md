@@ -100,7 +100,7 @@ Si le projet est déjà sur le web :
 
 		git clone https://user/monRepo.git
 
-Cela clone le repo sur son disque dur. Le répertoire `.git` est également présent et les deux versions ont TOUT l'historique. C''est essentiellement pourquoi il ne faut surtout pas versionner les builds et libs.
+Cela récupère les fichiers du Repository distant sur notre disque dur local. Le répertoire `.git/` est également copié ; il contient tout l'historique et nous avons donc créé un **Repository local**. Comme les deux projet local et distant ont TOUT l'historique, il ne faut surtout pas versionner les builds et libs.
 
 		git status
 
