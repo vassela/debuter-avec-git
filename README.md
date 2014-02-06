@@ -38,7 +38,7 @@ Installez Git. Vérifiez qu'il exist un fichier .gitconfig dans Users/moi
 			name = nicorama
 			email = nz@robusta.io
 		[core]
-			excludesfile = /Users/nicorama/.gitignore_global
+			excludesfile = ~/.gitignore_global
 
 
 
