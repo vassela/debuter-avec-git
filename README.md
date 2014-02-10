@@ -24,6 +24,8 @@ Lexique
 * *SSH* : Protocole sécurisé permettant de transmettre des commandes ou des fichiers
 
 
+![Exemple de push](./images/exemple-push.png)
+
 
 Démarrer avec Git
 ====
@@ -108,6 +110,36 @@ C'est la commande la plus fréquente. Elle permet de savoir où l'on en est, et 
 Si on fait `git status` au début du projet, on devrait être sur la branche *master*, c'est à dire la branche principale.
 
 
+Le cycle d'un commit
+===
+
+
+etat initial : le fichier n'est pas tracké dans .git/
+
+* `git add myFile` : le fichier est tracké. Un snaphot est mémorisé dans .git/
+* `git add otherFile` : le fichier est tracké. Un snaphot est mémorisé dans .git/
+* `git add myFile` : le fichier est modifié et était déjà tracké. Un nouveau snapshot écrase l'ancien.
+
+Ces snapshots sont jusqu'à présent placés dans un endroit appelé "stage"
+
+* `git add .` : tous les fichiers et répertoires modifiés ou non trackés sont rajoutés au stage
+* `git commit -m "myMessage"` : un snapshot des deux fichiers est créé. Le "stage" est effacé.
+
+Voila, vous avez fait votre premier commit !
+
+![Cycle d'un commit](./images/cycle/png)
+
+
+
+La différence notable avec CVS ou Subversion est la présence de ce *stage*. On peut se demander quelle est l'utilité de cet état intermédiaire. Il vous aidera pourtant à rattraper bien des erreurs.
+
+* En fait, après un commit, il existe toujours des traces du stage. Les Git Ninja utiliseront la commande *reflog* pour récupérer ces traces.
+* Après chaque commande, `git status` nous donne l'état des lieux
+* On peut ainsi faire plusieurs commits. `git log -3` nous rappelle les 3 derniers commits
+* N'oubliez pas l'option -m "message du commit". Sinon vous serez expédiez dans vim, et en général, vous ne voulez pas cela
+
+
+
 Récupérer des Commits, Envoyer ses Commits
 ----
 
@@ -134,27 +166,6 @@ Dans beaucoup de cas, un projet se contentera d'une seule remote. Si on se lance
  		git pull origin master : récupère et merge la branche master vers la branche courante
 
 
-Le cycle d'un commit
-===
-
-
-etat initial : le fichier n'est pas tracké dans .git/
-
-* `git add myFile` : le fichier est tracké. Un snaphot est mémorisé dans .git/
-* `git add otherFile` : le fichier est tracké. Un snaphot est mémorisé dans .git/
-* `git add myFile` : le fichier est modifié et était déjà tracké. Un nouveau snapshot écrase l'ancien.
-
-Ces snapshots sont jusqu'à présent placés dans un endroit appelé "stage"
-
-* `git add .` : tous les fichiers et répertoires modifiés ou non trackés sont rajoutés au stage
-* `git commit -m "myMessage"` : un snapshot des deux fichiers est créé. Le "stage" est effacé.
-
-Voila, vous avez fait votre premier commit ! La différence notable avec CVS ou Subversion est la présence de ce *stage*. On peut se demander quelle est l'utilité de cet état intermédiaire. Il vous aidera pourtant à rattraper bien des erreurs.
-
-* En fait, après un commit, il existe toujours des traces du stage. Les Git Ninja utiliseront la commande *reflog* pour récupérer ces traces.
-* Après chaque commande, `git status` nous donne l'état des lieux
-* On peut ainsi faire plusieurs commits. `git log -3` nous rappelle les 3 derniers commits
-* N'oubliez pas l'option -m "message du commit". Sinon vous serez expédiez dans vim, et en général, vous ne voulez pas cela
 
 Création et Utilisation des branches
 ====
@@ -166,6 +177,9 @@ Création de la branche
 * `git checkout mvc` : on se déplace dans la branche *mvc*
 * `git checkout -b mvc` : raccourci permettant de créer la branche mvc et de s'y déplacer
 * `git status` : nous signifie que l'on est bien dans la branche *mvc*
+
+![Création de la branche](./images/create-branch.png)
+
 
 Création de la feature
 ---
@@ -220,6 +234,11 @@ Et là c'est le drame. Impossible de push car **Jo** a également modifié origi
 * `git pull origin mvc`
 * `git log -4` : *pull* crée tout seul un *commit de merge*
 * On vérifie que tout fonctionne, ou on résoud le merge avec des outils comme IntelliJ, Eclipse, vim...
+
+![Pull necessitant un merge](./images/pull-with-merge.png)
+
+Il ne nous reste plus qu'à envoyer notre travail sur origin
+
 * `git push origin mvc` : hourrah !
 
 Git Flow
@@ -242,6 +261,8 @@ Voici un pot-pourri des recettes lorsque les choses déraillent. Une première c
 Tout ce qui n'a pas été committé se retrouve alors sur la branche *mvc*, y compris le stage.
 Si dans *mvc*, je fais `git add . ; git commit` alors ces modifications sont enregistrées dans *mvc*, et non *master*.
 
+
+![changements transférés vers une autre branche ](./images/branch-with-changes.png)
 
 
 Rajouter des changements au commit précédent
