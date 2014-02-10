@@ -127,7 +127,7 @@ Ces snapshots sont jusqu'à présent placés dans un endroit appelé "stage"
 
 Voila, vous avez fait votre premier commit !
 
-![Cycle d'un commit](./images/cycle/png)
+![Cycle d'un commit](./images/cycle.png)
 
 
 
