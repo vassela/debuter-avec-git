@@ -1,7 +1,7 @@
 Démarrer avec Git
 ====
 
-Ce guide a été écrit assez rapidement. Il est adapté aux débutants sur Git, mais avec si possible une expérience en CVS/SVN. Le document a été écrit en un trait, il y a encore beaucoup de choses à améliorer. Volontairement, l'esprit passe avant la lettre. Le [guide officiel](http://git-scm.com/documentation) fait foi.
+Ce guide est adapté aux débutants sur Git. Le document a été écrit en un trait, il y a encore beaucoup de choses à améliorer. Volontairement, l'esprit passe avant la lettre. Le [guide officiel](http://git-scm.com/documentation) fait foi. Il existe également une version web standard de ce [tutoriel Git sur le site de Robusta Code](http://www.robusta.io/content/tutoriel/git/start-git.html)
 
 Si vous êtes déjà familier avec Git, serez plus intéressé par la section [When things go wrong](#when-things-go-wrong-).
 
