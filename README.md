@@ -8,7 +8,8 @@ Si vous êtes déjà familier avec Git, serez plus intéressé par la section [W
 Enjoy !
 
 Nicolas Zozol, [Robusta Code](http://www.robusta.io)
-Ce document est en Domaine Publique.
+
+(Ce document est en Domaine Publique)
 
 Lexique
 ---
