@@ -281,7 +281,7 @@ Encore une fois vous avez tapé votre commit trop vite, et il y a une typo dans 
 
 		git commit -m "colo styles"
 		#oups, typo
-		git commit --amend -m "colo styles"
+		git commit --amend -m "coloration for styles"
 
 Changements qui partent à vau-l'eau
 ----
@@ -355,4 +355,4 @@ Avec *reset --soft*, on ne détruit pas le commit, mais ce qui a été commité 
 Et après
 ====
 
-Il faut bien tout cela pour *débuter* en Git. Après cela devient tout de suite plus compliqué. refs, prune, cherry-pick, dissect, patch, tag. Des commandes, des options, en veux-tu ?  [En voilà](http://git-scm.com/docs).
+Il faut bien tout cela pour *débuter* en Git. Après cela devient tout de suite plus compliqué. refs, prune, cherry-pick, bisect, patch, tag. Des commandes, des options, en veux-tu ?  [En voilà](http://git-scm.com/docs).
