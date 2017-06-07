@@ -3,7 +3,7 @@ Démarrer avec Git
 
 Ce guide est adapté aux débutants sur Git. Le document a été écrit en un trait, il y a encore beaucoup de choses à améliorer. Volontairement, l'esprit passe avant la lettre. Le [guide officiel](http://git-scm.com/documentation) fait foi. Il existe également une version web standard de ce [tutoriel Git sur le site de Robusta Code](http://www.robusta.io/content/tutoriel/git/start-git.html)
 
-Si vous êtes déjà familier avec Git, vous serez plus intéressé par la section [When things go wrong](#when-things-go-wrong-).
+Si vous êtes déjà familier avec Git, serez plus intéressé par la section [When things go wrong](#when-things-go-wrong-).
 
 Enjoy !
 
@@ -15,12 +15,12 @@ Lexique
 ---
 
 * *Commit* : un commit est un ensemble de modifications apportées et validées. Avec Git on commit d'abord sur son ordinateur, et non sur un serveur.
-* *Historique* : Permet de retrouver toutes les modifications apportées au projet. Il est construit à partir de la liste des commits
-* *Repository* : C'est le lieu contenant les fichiers du projet, avec **tout** son historique. Chaque developpeur du projet a son Repository *local*. Il y a aussi un Repository nommé *origin* faisant office de serveur.
+* *Historique* : Permet de retrouver toutes les modifications apportes au projet. Il est construit à partir de la liste des commits
+* *Repository* : C'est le lieu contenant les fichier du projet, avec **tout** son historique. Chaque developpeur du projet a son Repository *local*. Il y a aussi un Repository nommé *origin* faisant office de serveur.
 * *Remote* : c'est un Repository distant, par opposition à son Repository local
-* *Rollback* : revenir à une version précédente d'un fichier ou d'un projet
-* *Branche* : Une branche permet d'apporter des évolutions en parallèle. Jo travaille sur la branche A, Jack travaille sur la branche B. Jack ne voit pas le travail de Jo, et vice-versa.
-* *Merger* : Mélanger deux évolutions faites en parrallèle. Jo a travaillé, Jack a travaillé. Jack récupère le travail de Jo pour le merger dans son travail. Si ils ont travaillé sur les mêmes fichiers, il y a alors un risque de conflit.
+* *Rollback* : revenir a une version precedente d'un fichier ou d'un projet
+* *Branche* : Une branche permet d'apporter des évolutions en parrallèle. Jo travaille sur la branche A, Jack travaille sur la branche B. Jack ne voit pas le travail de Jo, et vice-versa.
+* *Merger* : Mélanger deux évolutions faites en parrallèle. Jo a travaillé, Jack a travaillé. Jack récupère le travail de Jo pour le merger dans son travail. Si ils ont travaillés sur les mêmes fichiers, il y a alors un risque de conflit.
 * *Push* : (pousser) Envoyer ses commits vers un Repository Remote
 * *Pull* : (tirer) Récupérer les commits des autres membres de l'équipe depuis le Repository
 * *SSH* : Protocole sécurisé permettant de transmettre des commandes ou des fichiers
@@ -29,6 +29,8 @@ Lexique
 ![Exemple de push](./images/exemple-push.png)
 
 
+Démarrer avec Git
+====
 
 Je considère que vous êtes sous Windows.
 
@@ -73,7 +75,7 @@ Principes de Git
 Trois grands principes :
 
 * Chaque repo est égal l'un envers l'autre
-* Git stocke des documents complets et non des différences entre deux versions
+* Git stock des documents complet et non des differences entre deux versions
 
 
 Si bien qu'il est possible de merger monRepo/brancheMaster/service/MonService.java avec linusRepo/brancheFeature/workInProgress/MonService.java même si les deux projets n'ont rien à voir
@@ -102,7 +104,7 @@ Si le projet est déjà sur le web :
 
 		git clone https://user/monRepo.git
 
-Cela récupère les fichiers du Repository distant sur notre disque dur local. Le répertoire `.git/` est également copié ; il contient tout l'historique et nous avons donc créé un **Repository local**. Comme les deux projets local et distant ont TOUT l'historique, il ne faut surtout pas versionner les builds et libs.
+Cela récupère les fichiers du Repository distant sur notre disque dur local. Le répertoire `.git/` est également copié ; il contient tout l'historique et nous avons donc créé un **Repository local**. Comme les deux projet local et distant ont TOUT l'historique, il ne faut surtout pas versionner les builds et libs.
 
 		git status
 
@@ -136,7 +138,7 @@ La différence notable avec CVS ou Subversion est la présence de ce *stage*. On
 * En fait, après un commit, il existe toujours des traces du stage. Les Git Ninja utiliseront la commande *reflog* pour récupérer ces traces.
 * Après chaque commande, `git status` nous donne l'état des lieux
 * On peut ainsi faire plusieurs commits. `git log -3` nous rappelle les 3 derniers commits
-* N'oubliez pas l'option -m "message du commit". Sinon vous serez expédiés dans vim, et en général, vous ne voulez pas cela.
+* N'oubliez pas l'option -m "message du commit". Sinon vous serez expédiez dans vim, et en général, vous ne voulez pas cela
 
 
 
@@ -268,7 +270,7 @@ Si dans *mvc*, je fais `git add . ; git commit` alors ces modifications sont enr
 Rajouter des changements au commit précédent
 ---
 
-Encore une fois, vous êtes allés trop vite, il y a une petite retouche css à faire.
+Encore une fois, vous êtes allé trop vite, il y a une petite retouche css à faire.
 
         git add styles.css
         git commit -m "changed styles"
@@ -281,7 +283,7 @@ Encore une fois vous avez tapé votre commit trop vite, et il y a une typo dans 
 
 		git commit -m "colo styles"
 		#oups, typo
-		git commit --amend -m "coloration for styles"
+		git commit --amend -m "colo styles"
 
 Changements qui partent à vau-l'eau
 ----
@@ -355,4 +357,4 @@ Avec *reset --soft*, on ne détruit pas le commit, mais ce qui a été commité 
 Et après
 ====
 
-Il faut bien tout cela pour *débuter* en Git. Après cela devient tout de suite plus compliqué. refs, prune, cherry-pick, bisect, patch, tag. Des commandes, des options, en veux-tu ?  [En voilà](http://git-scm.com/docs).
+Il faut bien tout cela pour *débuter* en Git. Après cela devient tout de suite plus compliqué. refs, prune, cherry-pick, dissect, patch, tag. Des commandes, des options, en veux-tu ?  [En voilà](http://git-scm.com/docs).
